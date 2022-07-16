@@ -1,0 +1,7 @@
+rootProject.name = 'test-framework-demo'
+include 'junit5-demo'
+include 'common-demo'
+include 'mockito-demo'
+include 'testng-demo'
+include 'power-mockito-demo'
+
