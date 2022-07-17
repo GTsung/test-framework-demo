@@ -17,7 +17,7 @@
 * [官方文档](https://junit.org/junit5/docs/current/user-guide/)
 
 ~~~~
-    JUnit5无法模拟测试，每次的测试运行都会真正操作数据库中的数据
+    JUnit5每次的测试运行都会真正操作数据库中的数据，可以用来测试工具类，但不适合模拟service测试
 ~~~~
 
 ### Mockito
@@ -26,7 +26,7 @@
 * [官方文档3](https://github.com/mockito/mockito/wiki)
 
 ~~~~
-    Mockito框架意在模拟
+    Mockito框架意在模拟(Mock)，非常适用service的测试，也适合测试依赖注入的程序
 ~~~~
 
 ~~~~
