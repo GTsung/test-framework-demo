@@ -9,7 +9,7 @@
 ### 工程结构
 * common-demo: 公共依赖
 * junit5-demo: 基于JUnit5的测试
-* mockito-demo: 基于Mockito的测试
+* mockito-demo: 基于Mockito 4.5.1的测试
 * power-mockito-demo: 基于PowerMockito的测试
 * testng-demo: 基于TestNG的测试
 
