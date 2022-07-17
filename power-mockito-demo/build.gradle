@@ -19,8 +19,15 @@ jar {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+
+    implementation(":common-demo")
+
+    testImplementation 'org.powermock:powermock-api-mockito2:2.0.2'
+    /*powerMock可以搭配Junit4 也可以搭配testNG，这里选择Junit4*/
+    testImplementation 'org.powermock:powermock-module-junit4:2.0.2'
+
+    testImplementation 'junit:junit:4.3'
+
 }
 
 test {

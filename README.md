@@ -10,7 +10,7 @@
 * common-demo: 公共依赖
 * junit5-demo: 基于JUnit5的测试
 * mockito-demo: 基于Mockito 4.6.1的测试
-* power-mockito-demo: 基于PowerMockito的测试
+* power-mockito-demo: 基于PowerMockito2 2.0.2及Junit 4.3 的测试
 * testng-demo: 基于TestNG的测试
 
 ### JUnit5
