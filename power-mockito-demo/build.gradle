@@ -20,13 +20,13 @@ jar {
 
 dependencies {
 
-    implementation(":common-demo")
+    implementation project(":common-demo")
 
-    testImplementation 'org.powermock:powermock-api-mockito2:2.0.2'
+    testImplementation 'org.powermock:powermock-api-mockito2:2.0.9'
     /*powerMock可以搭配Junit4 也可以搭配testNG，这里选择Junit4*/
-    testImplementation 'org.powermock:powermock-module-junit4:2.0.2'
+    testImplementation 'org.powermock:powermock-module-junit4:2.0.9'
 
-    testImplementation 'junit:junit:4.3'
+    testImplementation 'junit:junit:4.13.2'
 
 }
 

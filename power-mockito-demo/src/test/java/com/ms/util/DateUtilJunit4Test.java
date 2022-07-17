@@ -1,11 +1,13 @@
 package com.ms.util;
 
-import com.ms.util.DateUtil;
 import org.junit.Test;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * 引用的是JUnit4的包  org.junit.Test
+ */
 public class DateUtilJunit4Test {
 
     @Test
