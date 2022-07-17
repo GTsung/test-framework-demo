@@ -9,7 +9,7 @@
 ### 工程结构
 * common-demo: 公共依赖
 * junit5-demo: 基于JUnit5的测试
-* mockito-demo: 基于Mockito 4.5.1的测试
+* mockito-demo: 基于Mockito 4.6.1的测试
 * power-mockito-demo: 基于PowerMockito的测试
 * testng-demo: 基于TestNG的测试
 
@@ -26,7 +26,8 @@
 * [官方文档3](https://github.com/mockito/mockito/wiki)
 
 ~~~~
-    Mockito框架意在模拟(Mock)，非常适用service的测试，也适合测试依赖注入的程序
+    Mockito框架意在模拟(Mock)，非常适用service的测试，也适合测试依赖注入的程序;
+    无法mock private methods
 ~~~~
 
 ~~~~
