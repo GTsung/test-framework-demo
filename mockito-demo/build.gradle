@@ -21,7 +21,7 @@ jar {
 dependencies {
     implementation project(":common-demo")
 
-    testImplementation 'org.mockito:mockito-core:4.6.1'
+    testImplementation 'org.mockito:mockito-core:4.5.1'
 }
 
 test {

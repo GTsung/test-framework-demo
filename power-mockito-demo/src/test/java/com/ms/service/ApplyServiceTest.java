@@ -1,9 +1,9 @@
 package com.ms.service;
 
+import com.google.common.collect.Lists;
 import com.ms.domain.ApplyDO;
 import com.ms.manager.ApplyManager;
 import com.ms.service.impl.ApplyServiceImpl;
-import org.assertj.core.util.Lists;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -28,7 +28,6 @@ public class ApplyServiceTest {
     @Before
     public void init() {
         applyManager = Mockito.mock(ApplyManager.class);
-        applyService = Mockito.mock(ApplyServiceImpl.class);
         MockitoAnnotations.initMocks(this);
     }
 
