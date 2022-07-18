@@ -5,16 +5,19 @@ import com.ms.domain.ApprovalDO;
 import com.ms.manager.ApplyManager;
 import com.ms.manager.ApprovalManager;
 import com.ms.service.impl.ApprovalServiceImpl;
-import junit.framework.Assert;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
+import org.powermock.modules.junit4.PowerMockRunner;
 
 import java.math.BigDecimal;
 
+@RunWith(PowerMockRunner.class)
 public class ApprovalServiceTest {
 
     @Mock
@@ -30,7 +33,6 @@ public class ApprovalServiceTest {
     public void setUp() {
         approvalManager = Mockito.mock(ApprovalManager.class);
         applyManager = Mockito.mock(ApplyManager.class);
-        approvalService = Mockito.mock(ApprovalServiceImpl.class);
         MockitoAnnotations.initMocks(this);
     }
 
@@ -55,9 +57,8 @@ public class ApprovalServiceTest {
 
         // assert result
         ApprovalDO result = approvalService.getByApplyCode(applyCode);
-        Assert.assertEquals(applicant, result.getApplicant());
-        Assert.assertEquals(creditLine, result.getCreditLine());
-
+        Assert.assertEquals(result.getCreditLine(), creditLine);
+        Assert.assertEquals(result.getApplicant(), applicant);
     }
 
 }

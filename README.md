@@ -10,7 +10,7 @@
 * common-demo: 公共依赖
 * junit5-demo: 基于JUnit5的测试
 * mockito-demo: 基于Mockito 4.6.1的测试
-* power-mockito-demo: 基于PowerMockito2 2.0.9及Junit 4.13.2 的测试
+* power-mockito-demo: 基于PowerMockito2 2.0.0及Junit 4.13.2 的测试
 * testng-demo: 基于TestNG的测试
 
 ### JUnit5
@@ -39,7 +39,8 @@
 * [官方文档2](https://github.com/powermock/powermock/wiki)
 
 ~~~~
-    扩展了Mockito
+    扩展了Mockito，因为项目采用2.7.1的springboot，因此默认使用junit5，fucking junit5不支持powermock 
+    故在此替换junit为4，mockito版本降低
 ~~~~
 
 ### TestNG

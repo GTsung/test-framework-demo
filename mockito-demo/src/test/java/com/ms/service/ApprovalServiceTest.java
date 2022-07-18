@@ -32,20 +32,14 @@ public class ApprovalServiceTest {
      * 以下这种在JUnit4中使用，在@Before中将类mock，
      * 顺便 MockitoAnnotations.initMocks(this)---> 这个方法Mockito3.+已经过期
      */
-//    private AutoCloseable autoCloseable;
 
 //    @BeforeEach
 //    public void init() {
 //        approvalManager = Mockito.mock(ApprovalManager.class);
 //        applyManager = Mockito.mock(ApplyManager.class);
-//        approvalService = Mockito.mock(ApprovalServiceImpl.class);
-//        autoCloseable = MockitoAnnotations.openMocks(this);
+//        autoCloseable = MockitoAnnotations.initMocks(this);
 //    }
 
-//    @AfterEach
-//    public void close() throws Exception {
-//        autoCloseable.close();
-//    }
 
     @Test
     public void testGetByApplyCode() {
