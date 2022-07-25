@@ -15,6 +15,8 @@ import org.mockito.MockitoAnnotations;
 import org.powermock.api.mockito.PowerMockito;
 import org.powermock.modules.junit4.PowerMockRunner;
 
+import java.lang.reflect.Field;
+
 @RunWith(PowerMockRunner.class)
 public class RealServiceTest {
 
@@ -33,10 +35,13 @@ public class RealServiceTest {
     }
 
     @Test
-    public void testAssemble() {
+    public void testAssemble() throws Exception {
         ApplyDO applyDO = new ApplyDO();
+        Field field = ApplyServiceImpl.class.getDeclaredField("applyManager");
+        field.setAccessible(true);
+        field.set(applyService, applyManager);
+        Mockito.when(applyManager.save(applyDO)).thenReturn(1);
         PowerMockito.doCallRealMethod().when(applyService).assemble(applyDO);
-        PowerMockito.doCallRealMethod().when(applyManager).save(applyDO);
         applyDO = realService.assemble();
         Assert.assertEquals("fuck", applyDO.getApplicant());
     }
