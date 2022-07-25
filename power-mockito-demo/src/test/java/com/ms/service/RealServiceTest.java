@@ -35,8 +35,8 @@ public class RealServiceTest {
     @Test
     public void testAssemble() {
         ApplyDO applyDO = new ApplyDO();
-//        PowerMockito.when(applyManager.save(applyDO)).thenReturn(Mockito.anyInt());
         PowerMockito.doCallRealMethod().when(applyService).assemble(applyDO);
+        PowerMockito.doCallRealMethod().when(applyManager).save(applyDO);
         applyDO = realService.assemble();
         Assert.assertEquals("fuck", applyDO.getApplicant());
     }
