@@ -28,7 +28,8 @@ public class ApplyServiceImpl implements ApplyService {
     public ApplyDO assemble(ApplyDO applyDO) {
         applyDO.setApplyCode("001");
         applyDO.setApplicant("fuck");
-//        applyManager.save(applyDO);
+        applyManager.save(applyDO);
         return applyDO;
     }
+
 }
