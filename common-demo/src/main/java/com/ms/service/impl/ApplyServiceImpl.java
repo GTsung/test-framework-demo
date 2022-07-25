@@ -23,4 +23,12 @@ public class ApplyServiceImpl implements ApplyService {
     public List<ApplyDO> getAll() {
         return applyManager.selectAll();
     }
+
+    @Override
+    public ApplyDO assemble(ApplyDO applyDO) {
+        applyDO.setApplyCode("001");
+        applyDO.setApplicant("fuck");
+//        applyManager.save(applyDO);
+        return applyDO;
+    }
 }

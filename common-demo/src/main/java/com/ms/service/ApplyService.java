@@ -9,4 +9,6 @@ public interface ApplyService {
     int saveApply(ApplyDO applyDO);
 
     List<ApplyDO> getAll();
+
+    ApplyDO assemble(ApplyDO applyDO);
 }
